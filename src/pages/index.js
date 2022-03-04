@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import BaseLayout from '../layouts/base-layout'
+import Layout from '../layouts/layout'
 
 export default function Home() {
 
@@ -8,12 +8,16 @@ export default function Home() {
     console.log(name);
 
     const handleClick = () => {
-        setName('Replacement');
+        if (name != 'Original') {
+            setName('Original');
+        } else {
+            setName('Replacement');
+        }
         console.log(name);
     };
 
     return (
-        <BaseLayout>
+        <Layout>
             <section>
                 <div>
                     <h1>Hi, I'm Ulises, a UX Designer and Illustrator based in Brooklyn, New York</h1>
@@ -21,7 +25,7 @@ export default function Home() {
                 </div>
             </section>
             <button onClick={() => { handleClick() }}>{ name }</button>
-        </BaseLayout>
+        </Layout>
 
     )
 }

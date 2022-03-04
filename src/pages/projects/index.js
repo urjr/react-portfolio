@@ -1,11 +1,11 @@
 import React from 'react'
-import BaseLayout from '../../layouts/base-layout'
+import Layout from '../../layouts/layout'
 
 export default function Projects() {
   return (
-    <BaseLayout>
+    <Layout>
       <h1>My Projects</h1>   
-    </BaseLayout>
+    </Layout>
 
   )
 }
