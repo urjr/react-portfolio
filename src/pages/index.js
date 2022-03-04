@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import Layout from '../layouts/layout'
+import * as componentStyles from '../styles/main.module.css'
 
 export default function Home() {
 
@@ -8,7 +9,7 @@ export default function Home() {
     console.log(name);
 
     const handleClick = () => {
-        if (name != 'Original') {
+        if (name !== 'Original') {
             setName('Original');
         } else {
             setName('Replacement');
@@ -18,7 +19,7 @@ export default function Home() {
 
     return (
         <Layout>
-            <section>
+            <section className={componentStyles.header}>
                 <div>
                     <h1>Hi, I'm Ulises, a UX Designer and Illustrator based in Brooklyn, New York</h1>
                     <h3>Currently, I design Marketing Tools for Google. Formerly at Notarize, Broadlume, and Smarking</h3>

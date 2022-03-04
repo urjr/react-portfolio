@@ -1,9 +1,10 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
+import '../styles/layout.css'
 
 export default function Layout({ children }) {
   return (
-      <div>
+      <div className='layout'>
          <Navbar/>
          <div className='content'>
             { children }
