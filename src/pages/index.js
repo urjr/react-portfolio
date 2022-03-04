@@ -4,9 +4,6 @@ import Layout from '../layouts/layout'
 import * as componentStyles from '../styles/main.module.scss'
 
 export default function Home({ data }) {
-   
-    // Playing with state and click events
-    console.log(data);
 
     const { description, title, copyright } = data.site.siteMetadata;
     return (
@@ -28,11 +25,11 @@ export default function Home({ data }) {
 export const query = graphql`
     query siteInfo {
         site {
-        siteMetadata {
-            description
-            title
-            copyright
-        }
+            siteMetadata {
+                description
+                title
+                copyright
+            }
         }
     }  
 `
