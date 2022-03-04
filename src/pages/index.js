@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import Layout from '../layouts/layout'
-import * as componentStyles from '../styles/main.module.css'
+import * as componentStyles from '../styles/main.module.scss'
 
 export default function Home() {
 
