@@ -2,9 +2,10 @@ import { graphql } from 'gatsby';
 import React from 'react'
 import Layout from '../layouts/Layout'
 import * as componentStyles from '../styles/main.module.scss'
+import { GatsbyImage } from "gatsby-plugin-image"
 
 export default function Home({ data }) {
-
+    console.log(data);
     const { description, title, copyright } = data.site.siteMetadata;
     return (
         <Layout>
@@ -17,6 +18,7 @@ export default function Home({ data }) {
                 <p>{ title }</p>
                 <p>{ description }</p>
             </section>
+            <GatsbyImage image={data.file.childImageSharp.gatsbyImageData}/>
         </Layout>
 
     )
@@ -31,5 +33,11 @@ export const query = graphql`
                 copyright
             }
         }
-    }  
+        file(relativePath: {eq: "banner.png"}) {
+            childImageSharp {
+                gatsbyImageData(placeholder: BLURRED)
+            }
+        }
+    }
+    
 `

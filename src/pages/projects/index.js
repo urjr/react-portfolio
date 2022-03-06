@@ -10,7 +10,6 @@ export default function Projects({ data }) {
     <Layout>
       <section className={componentStyles.projects}>
         <h1>My Projects</h1>
-        <div>
           {projects.map(project => (
             <div>
               <h2>{ project.frontmatter.slug }</h2>
@@ -19,7 +18,6 @@ export default function Projects({ data }) {
               <Link to={'/projects/' + project.frontmatter.slug}>link</Link>
             </div>
           ))}
-        </div>
       </section>   
     </Layout>
   )
