@@ -1,6 +1,7 @@
 ---
+title: Notarize
 name: Notarize
-summary: Revolutionizing the Notary industry
+description: Revolutionizing the Notary industry
 slug: notarize
 ---
 
