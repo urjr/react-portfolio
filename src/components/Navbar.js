@@ -1,32 +1,33 @@
-import { Link, graphql, useStaticQuery } from 'gatsby'
+import { Link } from 'gatsby' //add graphql, and useStaticQuery to static queries
 import React from 'react'
 import * as componentStyles from '../styles/navbar.module.scss'
 
 export default function Navbar() {
-    const data = useStaticQuery(graphql`
-        query {
-            site {
-                 siteMetadata {
-                    description
-                    title
-                    copyright
-                }
-            }
-        }     
-    `)
 
-    console.log(data);
+    // Example of static query
+    
+    // const data = useStaticQuery(graphql`
+    //     query {
+    //         site {
+    //              siteMetadata {
+    //                 description
+    //                 title
+    //                 copyright
+    //             }
+    //         }
+    //     }     
+    // `)
 
-    const { title } = data.site.siteMetadata;
+    // console.log(data);
+
+    // const { title } = data.site.siteMetadata;
 
     return (
         <nav className={componentStyles.navbar}>
-            <h1>Ulises Reyes { title }</h1>
-            <div className="links">
-                <Link to='/'>Home</Link>
-                <Link to='/about'>About</Link>
-                <Link to='/projects'>Projects</Link>
-            </div>
+            <Link className={componentStyles.logo} activeStyle={{textDecoration: "udnerline"}} to='/'>UR</Link>
+            <Link activeStyle={{textDecoration: "udnerline"}} to='/projects'>Projects</Link>
+            <Link activeStyle={{textDecoration: "udnerline"}} to='/art'>Art</Link>
+            <Link activeStyle={{textDecoration: "udnerline"}} to='/about'>About</Link>
         </nav>
     )
 }
