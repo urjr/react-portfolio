@@ -25,9 +25,9 @@ export default function Navbar() {
     return (
         <nav className={componentStyles.navbar}>
             <Link className={componentStyles.logo} activeStyle={{textDecoration: "udnerline"}} to='/'>UR</Link>
-            <Link activeStyle={{textDecoration: "udnerline"}} to='/projects'>Projects</Link>
-            <Link activeStyle={{textDecoration: "udnerline"}} to='/art'>Art</Link>
-            <Link activeStyle={{textDecoration: "udnerline"}} to='/about'>About</Link>
+            <Link activeStyle={{textDecoration: "underline"}} to='/projects'>Projects</Link>
+            <Link activeStyle={{textDecoration: "underline"}} to='/art'>Art</Link>
+            <Link activeStyle={{textDecoration: "underline"}} to='/about'>About</Link>
         </nav>
     )
 }

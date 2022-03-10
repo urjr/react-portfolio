@@ -1,0 +1,19 @@
+//Fonts: Cormorant 300, Work Sans 400, Gochi Hand 400
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300&family=Gochi+Hand&family=Work+Sans&display=swap');
+
+
+// Top level components
+// Elements
+body {
+    background-color: $body-primary;
+    color: $text-primary;
+}
+
+// Text
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Cormorant', serif;
+}
+
+p, a, span {
+    font-family: 'Work Sans', sans-serif;
+}

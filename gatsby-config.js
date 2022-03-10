@@ -7,11 +7,19 @@
 module.exports = {
   /* Your site config here */
   plugins: [
-    `gatsby-plugin-sass`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`, 
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        additionalData: `@use 'variables' as *;`,
+        sassOptions: {
+          includePaths: [`${__dirname}/src/styles/`],
+        },
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -27,6 +35,8 @@ module.exports = {
       },
     },
   ],
+
+
   siteMetadata: {
     title: 'Ulises Reyes | UX Designer',
     description: 'Ulises is a UX designer and Illustrator currently Working as an Interaction designer for Google. Before Google, he worked at Notarize, Broadlume (formerly AdHawk, TechStars Boulder 2015), and Smarking (Y Combinator W14)',

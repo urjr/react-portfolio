@@ -1,12 +1,22 @@
+@use "sass:color";
+
 .navbar {
     text-align: center;
     letter-spacing: -.1em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: color.adjust($body-primary, $alpha: -.2);
+    padding: {
+        top: 1em;
+        bottom: 1em;
+    }
 
     a {
-        font-size: 1em;
+        font-size: 1.25em;
         vertical-align: center;
         margin-right: .75em;
-        text-decoration: none;;
+        text-decoration: none;
 
         &.logo {
             font-family: 'Gochi Hand', cursive;
