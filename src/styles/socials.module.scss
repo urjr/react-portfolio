@@ -1,3 +1,24 @@
 .socials {
-    background-color: red;
+    display: flex;
+    justify-content: center;;
+
+    padding: {
+        top: 1em;
+        bottom: 1em;
+    }
+
+    a {
+        margin: {
+            right: 1.25em;
+        }
+    }
+
+    path {
+        fill: $text-primary;
+    }
+
+    svg {
+        height: 1.25em;
+
+    }
 }

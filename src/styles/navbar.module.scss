@@ -3,7 +3,6 @@
 .navbar {
     text-align: center;
     letter-spacing: -.1em;
-    // position: fixed;
     top: 0;
     width: 100%;
     // background-color: color.adjust($body-primary, $alpha: -.2);
@@ -17,6 +16,7 @@
         vertical-align: center;
         margin-right: .75em;
         text-decoration: none;
+        color: $text-primary;
 
         &.logo {
             font-family: 'Gochi Hand', cursive;
