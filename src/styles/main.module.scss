@@ -1,0 +1,19 @@
+.splash {
+    margin: 0 1em;
+    // height: 100vh;
+    display: flex;
+    flex: {
+        direction: column;
+        grow: 1;
+    }
+
+    justify-content: center;
+
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-family: 'Work Sans', sans-serif;
+    }
+}

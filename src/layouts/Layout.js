@@ -5,10 +5,8 @@ import '../styles/layout.scss'
 export default function Layout({ children }) {
   return (
     <div className='wrapper'>
-        <Navbar/>
-        <div className='content'>
-          { children }
-      </div>
+      <Navbar/>
+        { children }
     </div>
   )
 }

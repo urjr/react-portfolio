@@ -5,15 +5,27 @@
 // Top level components
 // Elements
 body {
-    background-color: $body-primary;
-    color: $text-primary;
+    // background-color: $body-primary;
+    // color: $text-primary;
 }
 
 // Text
 h1,h2,h3,h4,h5,h6 {
     font-family: 'Cormorant', serif;
+    font-weight: 300;
+    letter-spacing: -.035em;
+    margin-top: 0;
 }
 
 p, a, span {
     font-family: 'Work Sans', sans-serif;
+}
+
+// Top level styles
+.wrapper {
+    display: flex;
+    flex: {
+        direction: column;
+    }
+    min-height: 100vh;
 }
