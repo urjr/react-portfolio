@@ -3,16 +3,16 @@ import Navbar from '../components/Navbar'
 import Socials from '../components/Socials'
 import '../styles/layout.scss'
 
-const isBrowser = typeof window !== "undefined"
+const isBrowser = () => typeof window !== "undefined"
 
 export default function Layout({ children }) {    
+  
   const [height, setHeight] = useState(window.innerHeight);
 
+
   useEffect(() => {
-    if(isBrowser){
-      window.addEventListener('resize', updateHeight);
-      return () => window.removeEventListener('resize', updateHeight);
-    }
+    isBrowser() && window.addEventListener('resize', updateHeight);
+    return () => window.removeEventListener('resize', updateHeight);
   });
 
 
