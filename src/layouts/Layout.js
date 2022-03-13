@@ -6,24 +6,22 @@ import '../styles/layout.scss'
 const isBrowser = typeof window !== "undefined"
 
 export default function Layout({ children }) {    
-  const [height, setHeight] = useState(window.innerHeight)
-
-
-    
-
+  const [height, setHeight] = useState(window.innerHeight);
 
   useEffect(() => {
-    if (isBrowser) {
+    if(isBrowser){
       window.addEventListener('resize', updateHeight);
       return () => window.removeEventListener('resize', updateHeight);
     }
   });
+
 
   const updateHeight = () => setHeight(window.innerHeight);
 
   return (
     <div className='wrapper' style={{minHeight: height}}>
       <Navbar/>
+      
         { children }
       <Socials/>
     </div>
