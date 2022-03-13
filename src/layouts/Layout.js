@@ -5,7 +5,7 @@ import '../styles/layout.scss'
 
 export default function Layout({ children }) {
   
-  React.useState(typeof window !== 'undefined'? window.innerWidth: 800)
+  React.useState(typeof window !== 'undefined'? window.innerHeight: 800);
   const [height, setHeight] = useState(window.innerHeight);
 
   useEffect(() => {
