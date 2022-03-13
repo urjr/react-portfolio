@@ -5,8 +5,8 @@ import '../styles/layout.scss'
 
 export default function Layout({ children }) {
   
+  React.useState(typeof window !== 'undefined'? window.innerWidth: 800)
   const [height, setHeight] = useState(window.innerHeight);
-
 
   useEffect(() => {
     window.addEventListener('resize', updateHeight);
@@ -16,11 +16,10 @@ export default function Layout({ children }) {
 
   const updateHeight = () => setHeight(window.innerHeight);
   
-  if (typeof window === "undefined") {return null}
+  if (typeof window === "undefined") return null;
   return (
     <div className='wrapper' style={{minHeight: height}}>
       <Navbar/>
-      
         { children }
       <Socials/>
     </div>
