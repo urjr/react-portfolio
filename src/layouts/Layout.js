@@ -5,20 +5,17 @@ import '../styles/layout.scss'
 
 export default function Layout({ children }) {
   
-  React.useState(typeof window !== 'undefined'? window.innerHeight: 800);
-  const [height, setHeight] = useState(window.innerHeight);
+const [height, setHeight] = useState(undefined);  
 
   useEffect(() => {
+    const updateHeight = () => setHeight(window.innerHeight);
     window.addEventListener('resize', updateHeight);
+    updateHeight();
     return () => window.removeEventListener('resize', updateHeight);
   });
-
-
-  const updateHeight = () => setHeight(window.innerHeight);
   
-  if (typeof window === "undefined") return null;
   return (
-    <div className='wrapper' style={{minHeight: height}}>
+    <div className='wrapper' style={{ minHeight: height }}>
       <Navbar/>
         { children }
       <Socials/>
