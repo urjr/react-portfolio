@@ -12,7 +12,7 @@ export default function Layout({ children }) {
     window.addEventListener('resize', updateHeight);
     updateHeight();
     return () => window.removeEventListener('resize', updateHeight);
-  });
+  }, [height]);
   
   return (
     <div className='wrapper' style={{ minHeight: height }}>
