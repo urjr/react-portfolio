@@ -3,21 +3,20 @@ import Navbar from '../components/Navbar'
 import Socials from '../components/Socials'
 import '../styles/layout.scss'
 
-const isBrowser = () => typeof window !== "undefined"
-
-export default function Layout({ children }) {    
+export default function Layout({ children }) {
   
   const [height, setHeight] = useState(window.innerHeight);
 
 
   useEffect(() => {
-    isBrowser() && window.addEventListener('resize', updateHeight);
+    window.addEventListener('resize', updateHeight);
     return () => window.removeEventListener('resize', updateHeight);
   });
 
 
   const updateHeight = () => setHeight(window.innerHeight);
-
+  
+  if (typeof window === "undefined") {return null}
   return (
     <div className='wrapper' style={{minHeight: height}}>
       <Navbar/>
