@@ -6,7 +6,7 @@ export default function Home() {
     return (
         <Layout>
             <section className={componentStyles.splash}>
-                <h1 >Hi, I'm Ulises, a UX Designer and Illustrator based in Brooklyn, New York</h1>
+                <h1 >Hi, I'm Ulises, a UX Designer and Illustrator based in New York</h1>
                 <h2>Currently, I design Marketing Tools for Google. Formerly at Notarize, Broadlume, and Smarking</h2>
             </section>
         </Layout>
