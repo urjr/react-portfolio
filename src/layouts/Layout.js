@@ -3,12 +3,20 @@ import Navbar from '../components/Navbar'
 import Socials from '../components/Socials'
 import '../styles/layout.scss'
 
-export default function Layout({ children }) {
+const isBrowser = typeof window !== "undefined"
+
+export default function Layout({ children }) {    
   const [height, setHeight] = useState(window.innerHeight)
 
+
+    
+
+
   useEffect(() => {
-    window.addEventListener('resize', updateHeight);
-    return () => window.removeEventListener('resize', updateHeight);
+    if (isBrowser) {
+      window.addEventListener('resize', updateHeight);
+      return () => window.removeEventListener('resize', updateHeight);
+    }
   });
 
   const updateHeight = () => setHeight(window.innerHeight);
@@ -21,5 +29,3 @@ export default function Layout({ children }) {
     </div>
   )
 }
-
-// export default height;
