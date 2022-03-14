@@ -7,6 +7,10 @@
         grow: 1;
     }
 
+    @include media($xs-mobile, max-width) {
+        margin: 0 1em;
+    }
+
     @include media($laptop) {
         margin: 0 10em;
     }
@@ -23,6 +27,10 @@
     h1 {
         font-size: 3em;
 
+        @include media($xs-mobile, max-width) {
+            font-size: 2.5em;
+        }
+
         @include media($tablet) {
             font-size: 4em;
         }
@@ -38,6 +46,10 @@
 
     h2 {
         font-family: 'Work Sans', sans-serif;
+
+        @include media($xs-mobile, max-width) {
+            font-size: 1.25em;
+        }
 
         @include media($tablet) {
             font-size: 2em;

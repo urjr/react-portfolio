@@ -30,6 +30,10 @@
     svg {
         height: 1.25em;
 
+        @include media($xs-mobile, max-width) {
+            height: 1.15em;
+        }
+
         @include media($desktop) {
             height: auto;
             width: 2em;
