@@ -64,6 +64,7 @@
 
         @include media($xl-desktop) {
             font-size: 3em;
+            width: 65%;
         }
     }
 }
