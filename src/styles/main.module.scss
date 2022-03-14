@@ -45,12 +45,12 @@
 
         .mask {
             display: inline-block;
-            overflow: clip;
-            overflow-clip-margin: .05em;
+            overflow: hidden;
             vertical-align: top;
 
             .animate {
                 display: inline-block;
+                transform: translateY(-.1em);
                 animation: {
                     name: growin;
                     duration: .75s;
