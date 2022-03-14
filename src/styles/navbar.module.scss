@@ -29,7 +29,7 @@
             font-family: 'Gochi Hand', cursive;
             font-size: 2em;
 
-            @include media($desktop) {
+            @include media($xl-desktop, $height: $xl-desktop-height) {
                 font-size: 3em;
             }
         }
@@ -38,7 +38,7 @@
             font-size: 1.15em;
         }
 
-        @include media($desktop) {
+        @include media($xl-desktop, $height: $xl-desktop-height) {
             font-size: 2em;
         }
     }

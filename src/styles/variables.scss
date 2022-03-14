@@ -1,6 +1,6 @@
 // Breakpoints
-@mixin media ($width, $minmax: min-width) {
-    @media only screen and ($minmax: $width) {
+@mixin media ($width, $min-max-width: min-width, $height: 0) {
+    @media only screen and ($min-max-width: $width) and (min-height: $height) {
         @content
     }
 }
@@ -8,7 +8,9 @@ $xs-mobile: 320px;
 $tablet: 768px;
 $laptop: 996px;
 $desktop: 1200px;
-$xl-desktop: 1600px;
+$xl-desktop: 1440px;
+
+$xl-desktop-height: 996px;
 
 // Main page colors
 $body-primary: #FFF;

@@ -34,7 +34,7 @@
             height: 1.15em;
         }
 
-        @include media($desktop) {
+        @include media($xl-desktop, $height: $xl-desktop-height) {
             height: auto;
             width: 2em;
         }

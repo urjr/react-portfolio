@@ -20,7 +20,7 @@
         margin: 0 auto;
     }
 
-    @include media ($xl-desktop) {
+    @include media ($xl-desktop, $height: $xl-desktop-height) {
         width: 1200px;
     }
 
@@ -36,10 +36,10 @@
         }
 
         @include media($desktop) {
-            font-size: 6em;
+            font-size: 4.5em;
         }
 
-        @include media($xl-desktop) {
+        @include media($xl-desktop, $height: $xl-desktop-height) {
             font-size: 7em;
         }
     }
@@ -59,10 +59,10 @@
         }
 
         @include media($desktop) {
-            font-size: 2.5em;
+            font-size: 2em;
         }
 
-        @include media($xl-desktop) {
+        @include media($xl-desktop, $height: $xl-desktop-height) {
             font-size: 3em;
             width: 65%;
         }
