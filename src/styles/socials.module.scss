@@ -1,15 +1,25 @@
 .socials {
     display: flex;
-    justify-content: center;;
-
+    justify-content: center;
     padding: {
         top: 1em;
         bottom: 1em;
     }
 
+    @include media($desktop) {
+        flex-direction: column;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+    }
+
     a {
         margin: {
             right: 1.25em;
+        }
+
+        @include media($desktop) {
+            margin: 1.5em
         }
     }
 
@@ -20,5 +30,9 @@
     svg {
         height: 1.25em;
 
+        @include media($desktop) {
+            height: auto;
+            width: 2em;
+        }
     }
 }

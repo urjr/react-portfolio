@@ -1,3 +1,15 @@
+// Breakpoints
+@mixin media ($width, $minmax: min-width) {
+    @media only screen and ($minmax: $width) {
+        @content
+    }
+}
+$xs-mobile: 320px;
+$tablet: 768px;
+$laptop: 996px;
+$desktop: 1200px;
+$xl-desktop: 1600px;
+
 // Main page colors
 $body-primary: #FFF;
 $body-secondary: #E0DDAA;

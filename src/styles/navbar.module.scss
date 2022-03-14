@@ -11,6 +11,13 @@
         bottom: 1em;
     }
 
+    @include media($desktop) {
+        text-align: right;
+        position: relative;
+        right: 2em;
+        margin-right: 2em;
+    }
+
     a {
         font-size: 1.25em;
         vertical-align: center;
@@ -20,6 +27,14 @@
 
         &.logo {
             font-family: 'Gochi Hand', cursive;
+            font-size: 2em;
+
+            @include media($desktop) {
+                font-size: 3em;
+            }
+        }
+
+        @include media($desktop) {
             font-size: 2em;
         }
     }
