@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout'
 import * as componentStyles from '../styles/main.module.scss'
 
 export default function Home() {
+
     return (
         <Layout>
             <section className={componentStyles.splash}>
