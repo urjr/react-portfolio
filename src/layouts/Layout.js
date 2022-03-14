@@ -5,7 +5,7 @@ import '../styles/layout.scss'
 
 export default function Layout({ children }) {
   
-  const [height, setHeight] = useState("100vh");  
+  const [height, setHeight] = useState("100vh");
 
   useEffect(() => {
     const updateHeight = () => setHeight(window.innerHeight);

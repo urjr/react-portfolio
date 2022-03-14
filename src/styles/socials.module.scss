@@ -6,6 +6,20 @@
         bottom: 1em;
     }
 
+    animation: {
+        name: fadein;
+        duration: .75s;
+        animation-timing-function: ease-out;
+        fill-mode: both;
+        delay: 2s;
+    }
+
+    @keyframes fadein {
+        from {
+            opacity: 0;
+        }
+    }
+
     @include media($desktop) {
         flex-direction: column;
         position: fixed;

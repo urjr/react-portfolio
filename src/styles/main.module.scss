@@ -16,7 +16,7 @@
     }
 
     @include media($desktop) {
-        width: 800px;
+        width: 900px;
         margin: 0 auto;
     }
 
@@ -36,16 +36,65 @@
         }
 
         @include media($desktop) {
-            font-size: 4.5em;
+            font-size: 5em;
         }
 
         @include media($xl-desktop, $height: $xl-desktop-height) {
             font-size: 7em;
         }
+
+        .mask {
+            display: inline-block;
+            overflow: clip;
+            overflow-clip-margin: .05em;
+            vertical-align: top;
+
+            .animate {
+                display: inline-block;
+                animation: {
+                    name: growin;
+                    duration: .75s;
+                    timing-function: ease-out;
+                    fill-mode: backwards;
+                }
+
+                .hoverable {
+                    background: none;
+                    color: inherit;
+                    border: none;
+                    padding: 0;
+                    font: inherit;
+                    cursor: pointer;
+                    outline: inherit;
+                    letter-spacing: inherit;
+                }
+            }
+
+            @keyframes growin {
+                from {
+                    transform: translateY(1.1em);
+                }
+            }
+
+            @keyframes fadein {
+                from {
+                    transform: translateY(.5em);
+                    opacity: 0;
+                }
+            }
+        }
     }
 
     h2 {
         font-family: 'Work Sans', sans-serif;
+
+        animation: {
+            name: fadein;
+            duration: .75s;
+            animation-timing-function: ease-out;
+            fill-mode: backwards;
+            delay: 2s;
+        }
 
         @include media($xs-mobile, max-width) {
             font-size: 1.25em;

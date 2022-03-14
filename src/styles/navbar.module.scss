@@ -11,6 +11,20 @@
         bottom: 1em;
     }
 
+    animation: {
+        name: fadein;
+        duration: .75s;
+        animation-timing-function: ease-out;
+        fill-mode: both;
+        delay: 2s;
+    }
+
+    @keyframes fadein {
+        from {
+            opacity: 0;
+        }
+    }
+
     @include media($desktop) {
         text-align: right;
         position: relative;
@@ -19,6 +33,7 @@
     }
 
     a {
+        font-family: 'Work Sans', sans-serif;
         font-size: 1.25em;
         vertical-align: center;
         padding: .35em;
