@@ -1,5 +1,11 @@
+@use "sass:color";
+
 .splash {
-    margin: 0 3em;
+    margin: {
+        top: 4em;
+        left: 3em;
+        right: 3em;
+    }
     display: flex;
     justify-content: center;
     flex: {
@@ -8,11 +14,17 @@
     }
 
     @include media($xs-mobile, max-width) {
-        margin: 0 1em;
+        margin: {
+            left: 1em;
+            right: 1em;
+        }
     }
 
     @include media($laptop) {
-        margin: 0 10em;
+        margin: {
+            left: 10em;
+            right: 10em;
+        }
     }
 
     @include media($desktop) {
@@ -54,25 +66,41 @@
                 animation: {
                     name: growin;
                     duration: .75s;
-                    timing-function: ease-out;
-                    fill-mode: backwards;
+                    timing-function: cubic-bezier(.37,.97,.48,.99);
+                    fill-mode: both;
                 }
 
                 .hoverable {
+                    background-color: $body-secondary;
+                    color: $text-primary;
+                    text-decoration: none;
+                    animation: {
+                        name: fadebg;
+                        duration: .75s;
+                        timing-function: ease-out;
+                        fill-mode: both;
+                        delay: 2s;
+                    }
+
+                    &:hover {
+                        background-color: color.scale($body-secondary, $lightness: -5%);
+                    }
+        
+                    &:active {
+                        background-color: color.scale($body-secondary, $lightness: -10%);
+                    }
+                }
+            }
+
+            @keyframes fadebg {
+                from {
                     background: transparent;
-                    color: inherit;
-                    border: none;
-                    padding: 0;
-                    font: inherit;
-                    cursor: pointer;
-                    outline: inherit;
-                    letter-spacing: inherit;
                 }
             }
 
             @keyframes growin {
                 from {
-                    transform: translateY(1.1em);
+                    transform: translateY(1em);
                 }
             }
 
@@ -94,6 +122,20 @@
             animation-timing-function: ease-out;
             fill-mode: backwards;
             delay: 2s;
+        }
+
+        a {
+            background-color: $body-secondary;
+            color: $text-primary;
+            text-decoration: none;
+
+            &:hover {
+                background-color: color.scale($body-secondary, $lightness: -5%);
+            }
+
+            &:active {
+                background-color: color.scale($body-secondary, $lightness: -10%);
+            }
         }
 
         @include media($xs-mobile, max-width) {
