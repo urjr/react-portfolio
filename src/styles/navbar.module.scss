@@ -27,9 +27,9 @@
     }
 
     @include media($desktop) {
-        padding-right: 2em;
-        text-align: right;
-        right: 0;
+        padding-left: 2em;
+        text-align: left;
+        left: 0;
     }
 
     a {
